@@ -13,4 +13,4 @@ Berikut adalah flowchart yang menggambarkan alur kerja aplikasi:
 - Muhammad Gilang Febrian [mengerjakan backend app.py]
 
 ## Link Video Dokumentasi
-Anda dapat menonton video dokumentasi aplikasi melalui tautan berikut: [Klik Disini]()
+Anda dapat menonton video dokumentasi aplikasi melalui tautan berikut: [Klik Disini](https://youtu.be/A2Yf8whT_4E)
