@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Edit Barang</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Navigasi Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('dashboard') }}">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Edit Barang</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label>Nama Barang</label>
+                <input type="text" name="name" class="form-control" value="{{ product[1] }}" required>
+            </div>
+            <div class="mb-3">
+                <label>Deskripsi</label>
+                <textarea name="description" class="form-control" required>{{ product[2] }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label>Harga</label>
+                <input type="number" name="price" class="form-control" value="{{ product[3] }}" required>
+            </div>
+            <div class="mb-3">
+                <label>Gambar Saat Ini</label><br>
+                <img src="{{ url_for('static', filename='uploads/' ~ product[4]) }}" alt="Gambar Barang" class="img-thumbnail" style="width: 150px;">
+            </div>
+            <div class="mb-3">
+                <label>Ganti Gambar (Opsional)</label>
+                <input type="file" name="image" class="form-control" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <label>Kategori</label>
+                <input type="text" name="category" class="form-control" value="{{ product[5] }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        </form>
+    </div>
+</body>
+
+</html>
